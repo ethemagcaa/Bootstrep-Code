@@ -1,0 +1,56 @@
+﻿@model TemelLayoutOrnek.Models.Musteri
+
+@{
+    ViewData["Title"] = "YeniKayit";
+}
+
+<h1>Yeni Müşteri Kayıt</h1>
+
+<h4>Musteri</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="YeniKayit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID" class="control-label"></label>
+                <input asp-for="ID" class="form-control" />
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyad" class="control-label"></label>
+                <input asp-for="Soyad" class="form-control" />
+                <span asp-validation-for="Soyad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dogtar" class="control-label"></label>
+                <input asp-for="Dogtar" class="form-control" />
+                <span asp-validation-for="Dogtar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TcKimlikNo" class="control-label"></label>
+                <input asp-for="TcKimlikNo" class="form-control" />
+                <span asp-validation-for="TcKimlikNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adres" class="control-label"></label>
+                <input asp-for="Adres" class="form-control" />
+                <span asp-validation-for="Adres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="MListele">Listeye Dön</a>
+</div>
+
+

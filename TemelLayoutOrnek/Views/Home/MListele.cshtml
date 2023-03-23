@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TemelLayoutOrnek.Models.Musteri>
+
+@{
+    ViewData["Title"] = "MListele";
+}
+
+<h1>Müşteri Listesi</h1>
+
+<p>
+    <a asp-action="YeniKayit">Yeni Müşteri Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                No
+            </th>
+            <th>
+                Müşteri Adı
+            </th>
+            <th>
+                Müşteri Soyadı
+            </th>
+            <th>
+                Müşteri Doğum Tarihi
+            </th>
+            <th>
+                Müşteri TC Kimlik Numarası
+            </th>
+            <th>
+                Müşteri Adresi
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dogtar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TcKimlikNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adres)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
